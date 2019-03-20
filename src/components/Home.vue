@@ -26,6 +26,21 @@
             <div>
               <h3 class="display-1 mb-4">Before you start</h3>
               <div class="subheading" style="text-align: justify">{{ text.start }}</div>
+              <div class="subheading" style="text-align: justify">
+                <v-container>
+                  <v-list>
+                    <v-list-tile avatar v-for="(item, index) in text.listStart" :key="index">
+                      <v-list-tile-avatar>
+                        <v-icon>arrow_right</v-icon>
+                      </v-list-tile-avatar>
+
+                      <v-list-tile-content>
+                        <v-list-tile-title>{{item}}</v-list-tile-title>
+                      </v-list-tile-content>
+                    </v-list-tile>
+                  </v-list>
+                </v-container>
+              </div>
             </div>
           </v-card-title>
         </v-card>
@@ -41,7 +56,11 @@ export default {
     images: { background: require("@/assets/textlogo.png") },
     text: {
       start:
-        "Before we can use the app, you will need to personally download your Facebook data. This can only be done by you. The files you will download contain valuable information (including some you might not expect). To secure your privacy, please take the following instructions:"
+        "Before we can use the app, you will need to personally download your Facebook data. This can only be done by you. The files you will download contain valuable information (including some you might not expect). To secure your privacy, please take the following instructions:",
+      listStart: [
+        "Use a trusted network such as your secured home network. Consider the risk of using a public WiFi network.",
+        "Make sure to use a virus/malware free laptop. Run a virus scan and clean before you use this app."
+      ]
     },
     items: [
       {
