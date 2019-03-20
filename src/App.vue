@@ -2,18 +2,21 @@
   <div id="app">
     <navbar/>
     <home/>
+    <customFooter/>
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 export default {
   name: "app",
   components: {
     navbar: Navbar,
-    home: Home
+    home: Home,
+    customFooter: Footer
   }
 };
 </script>
