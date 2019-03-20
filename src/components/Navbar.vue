@@ -1,7 +1,10 @@
 <template>
   <nav>
-    <v-toolbar app color="light-blue darken-3" dark>
-      <!--336699-->
+    <v-toolbar app color="#336699" dark>
+      <!--336699  light-blue darken-3-->
+      <v-toolbar-side-icon style="background-color: #ffffff">
+        <v-img :src="images.icon"/>
+      </v-toolbar-side-icon>
       <v-toolbar-title class="headline text-uppercase">
         <span>Mind</span>
         <span class="font-weight-light">Sweeper</span>
@@ -20,7 +23,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    images: { icon: require("@/assets/logo_notext.png") }
+  })
+};
 </script>
 
 
