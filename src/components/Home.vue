@@ -77,6 +77,7 @@
                   color="indigo"
                   round
                   class="mb-2"
+                  @click="$emit('changeView', 'download')"
                 >Open this link in a new tab and follow the instructions</v-btn>
               </v-card-actions>
             </v-card>
@@ -103,7 +104,15 @@
               </v-card-actions>
 
               <v-card-actions class="justify-center">
-                <v-btn flat outline block color="indigo" round class="mb-2">Who created this?</v-btn>
+                <v-btn
+                  flat
+                  outline
+                  block
+                  color="indigo"
+                  round
+                  class="mb-2"
+                  @click="$emit('changeView', 'about')"
+                >Who created this?</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
