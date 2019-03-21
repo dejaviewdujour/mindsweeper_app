@@ -23,26 +23,25 @@
       <v-container>
         <v-card color="blue lighten-5">
           <v-card-title primary-title>
-            <div>
-              <h3 class="display-1 mb-4">Before you start</h3>
-              <div class="subheading" style="text-align: justify">{{ text.start }}</div>
-              <div class="subheading" style="text-align: justify">
-                <v-container>
-                  <v-list>
-                    <v-list-tile avatar v-for="(item, index) in text.listStart" :key="index">
-                      <v-list-tile-avatar>
-                        <v-icon>arrow_right</v-icon>
-                      </v-list-tile-avatar>
-
-                      <v-list-tile-content>
-                        <v-list-tile-title>{{item}}</v-list-tile-title>
-                      </v-list-tile-content>
-                    </v-list-tile>
-                  </v-list>
-                </v-container>
-              </div>
-            </div>
+            <h3 class="display-1">Before you start</h3>
           </v-card-title>
+          <v-divider class="divider"/>
+          <v-card-text>
+            <div class="subheading" style="text-align: justify">{{ text.start }}</div>
+          </v-card-text>
+          <v-container>
+            <v-list>
+              <v-list-tile avatar v-for="(item, index) in text.listStart" :key="index">
+                <v-list-tile-avatar>
+                  <v-icon>arrow_right</v-icon>
+                </v-list-tile-avatar>
+
+                <v-list-tile-content>
+                  <v-list-tile-title>{{item}}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </v-list>
+          </v-container>
         </v-card>
       </v-container>
     </section>
@@ -52,50 +51,69 @@
           <v-flex xs12 sm6>
             <v-card color="blue lighten-5">
               <v-card-title primary-title>
-                <div>
-                  <h3 class="display-1 mb-4">How to download your Facebook data</h3>
-                  <div class="subheading" style="text-align: justify">You will need:</div>
-                  <div class="subheading" style="text-align: justify">
-                    <v-container>
-                      <v-list>
-                        <v-list-tile avatar v-for="(item, index) in text.fbData" :key="index">
-                          <v-list-tile-avatar>
-                            <v-icon>arrow_right</v-icon>
-                          </v-list-tile-avatar>
-
-                          <v-list-tile-content>
-                            <v-list-tile-title>{{item}}</v-list-tile-title>
-                          </v-list-tile-content>
-                        </v-list-tile>
-                      </v-list>
-                    </v-container>
-                    <v-btn
-                      flat
-                      outline
-                      color="indigo"
-                      round
-                    >Open this link in a new tab and follow the instructions</v-btn>
-                  </div>
-                </div>
+                <h3 class="display-1">How to download your Facebook data</h3>
               </v-card-title>
+              <v-divider class="divider"/>
+              <v-card-text>
+                <div class="subheading" style="text-align: justify">You will need:</div>
+              </v-card-text>
+              <v-container>
+                <v-list>
+                  <v-list-tile avatar v-for="(item, index) in text.fbData" :key="index">
+                    <v-list-tile-avatar>
+                      <v-icon>arrow_right</v-icon>
+                    </v-list-tile-avatar>
+
+                    <v-list-tile-content>
+                      <v-list-tile-title>{{item}}</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-container>
+              <v-card-actions class="justify-center">
+                <v-btn
+                  flat
+                  outline
+                  color="indigo"
+                  round
+                  class="mb-2"
+                  @click="$emit('changeView', 'download')"
+                >Open this link in a new tab and follow the instructions</v-btn>
+              </v-card-actions>
             </v-card>
           </v-flex>
           <v-flex xs12 sm6>
             <v-card color="blue lighten-5" class="ml-2">
               <v-card-title primary-title>
-                <div>
-                  <h3 class="display-1 mb-4">Additional Resources</h3>
-                  <div
-                    class="subheading"
-                    style="text-align: justify"
-                  >Here are some resources explaining what's going on:</div>
-                  <div class="subheading" style="text-align: center">
-                    <v-btn flat outline block color="indigo" round>What are these files?</v-btn>
-                    <v-btn flat outline block color="indigo" round>How did this happen?</v-btn>
-                    <v-btn flat outline block color="indigo" round>Who created this?</v-btn>
-                  </div>
-                </div>
+                <h3 class="display-1">Additional Resources</h3>
               </v-card-title>
+              <v-divider class="divider"/>
+
+              <v-card-text>
+                <div
+                  class="subheading"
+                  style="text-align: justify"
+                >Here are some resources explaining what's going on:</div>
+              </v-card-text>
+              <v-card-actions class="justify-center">
+                <v-btn flat outline block color="indigo" round>What are these files?</v-btn>
+              </v-card-actions>
+
+              <v-card-actions class="justify-center">
+                <v-btn flat outline block color="indigo" round>How did this happen?</v-btn>
+              </v-card-actions>
+
+              <v-card-actions class="justify-center">
+                <v-btn
+                  flat
+                  outline
+                  block
+                  color="indigo"
+                  round
+                  class="mb-2"
+                  @click="$emit('changeView', 'about')"
+                >Who created this?</v-btn>
+              </v-card-actions>
             </v-card>
           </v-flex>
         </v-layout>

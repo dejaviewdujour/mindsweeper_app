@@ -11,12 +11,12 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat>Home</v-btn>
-        <v-btn flat>About</v-btn>
-        <v-btn flat>Download</v-btn>
-        <v-btn flat>Security</v-btn>
-        <v-btn flat>How</v-btn>
-        <v-btn flat>Files</v-btn>
+        <v-btn flat @click="$emit('changeView', 'home')">Home</v-btn>
+        <v-btn flat @click="$emit('changeView', 'about')">About</v-btn>
+        <v-btn flat @click="$emit('changeView', 'download')">Download</v-btn>
+        <v-btn flat @click="$emit('changeView', 'security')">Security</v-btn>
+        <v-btn flat @click="$emit('changeView', 'how')">How</v-btn>
+        <v-btn flat @click="$emit('changeView', 'info')">Info</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </nav>
