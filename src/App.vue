@@ -2,6 +2,7 @@
   <div id="app">
     <navbar v-on:changeView="changeView"/>
     <home v-if="currentView === 'home'" v-on:changeView="changeView"/>
+    <about v-if="currentView === 'about'" v-on:changeView="changeView"/>
     <customFooter/>
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import About from "./components/About";
 import Footer from "./components/Footer";
 
 export default {
@@ -16,6 +18,7 @@ export default {
   components: {
     navbar: Navbar,
     home: Home,
+    about: About,
     customFooter: Footer
   },
   data: () => ({
