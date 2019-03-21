@@ -22,9 +22,30 @@
                 <v-layout>
                   <v-flex md1>
                     <!-- <strong>{{index + 1}}.-</strong> -->
-                    <v-icon>arrow_right</v-icon>
+                    <i class="fas fa-hand-point-right"></i>
                   </v-flex>
-                  <v-flex md11>{{item.text}}</v-flex>
+                  <v-flex md11>
+                    {{item.text}}
+                    <div v-if="item.sublist">
+                      <v-list>
+                        <v-list-tile
+                          avatar
+                          v-for="(element, position) in item.sublist"
+                          :key="position"
+                        >
+                          <v-list-tile-avatar>
+                            <v-icon>label_important</v-icon>
+                          </v-list-tile-avatar>
+
+                          <v-list-tile-content>
+                            <v-list-tile-title>
+                              <div class="subheading">{{element}}</div>
+                            </v-list-tile-title>
+                          </v-list-tile-content>
+                        </v-list-tile>
+                      </v-list>
+                    </div>
+                  </v-flex>
                 </v-layout>
               </div>
             </v-card-text>
