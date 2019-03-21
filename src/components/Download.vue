@@ -15,17 +15,23 @@
     </v-jumbotron>
     <v-container>
       <v-card>
-        <v-list>
-          <v-list-tile avatar v-for="(item, index) in steps" :key="index">
-            <v-list-tile-avatar>
-              <v-icon>arrow_right</v-icon>
-            </v-list-tile-avatar>
+        <v-card-text>
+          <v-card v-for="(item, index) in steps" :key="index" class="mb-4" flat>
+            <v-card-text>
+              <div class="title">
+                <v-layout>
+                  <v-flex md1>
+                    <!-- <strong>{{index + 1}}.-</strong> -->
+                    <v-icon>arrow_right</v-icon>
+                  </v-flex>
+                  <v-flex md11>{{item.text}}</v-flex>
+                </v-layout>
+              </div>
+            </v-card-text>
 
-            <v-list-tile-content>
-              <v-list-tile-title>{{item.text}}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
+            <v-img v-if="item.img" :src="item.img" max-height="25rem" contain></v-img>
+          </v-card>
+        </v-card-text>
       </v-card>
     </v-container>
   </div>
@@ -39,15 +45,15 @@ export default {
       { text: `Go to Facebook and sign in.`, img: "" },
       {
         text: `Select the down arrow tab beside the question mark in your dashboard, and click "Settings."`,
-        img: ""
+        img: require("@/assets/instructions/01.png")
       },
       {
         text: `Select "Your Facebook information" from the options on the left pane.`,
-        img: ""
+        img: require("@/assets/instructions/02.png")
       },
       {
         text: `Select "Download Your Information".`,
-        img: ""
+        img: require("@/assets/instructions/03.png")
       },
       {
         text: `Make sure you select "New File", and the followings:`,
@@ -56,11 +62,11 @@ export default {
           "Format: JSON",
           "Quality of media: Medium (choose Low if you would like your information faster)"
         ],
-        img: ""
+        img: require("@/assets/instructions/04.png")
       },
       {
         text: `Select the “Create File” button.`,
-        img: ""
+        img: require("@/assets/instructions/05.png")
       },
       {
         text: `After a few minutes (as much as 30 minutes if you are a frequent Facebook user), you will receive a notification on Facebook that it is ready to download a zip folder.`,
@@ -68,7 +74,7 @@ export default {
       },
       {
         text: `Select the "Download" button to download the folder to your device.`,
-        img: ""
+        img: require("@/assets/instructions/06.png")
       },
       {
         text: "Once you have downloaded the zip folder, unzip it.",

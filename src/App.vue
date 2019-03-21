@@ -30,6 +30,7 @@ export default {
   methods: {
     changeView: function(value) {
       this.currentView = value;
+      window.scrollTo(0, 0);
     }
   }
 };
