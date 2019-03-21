@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <navbar/>
-    <home/>
+    <navbar v-on:changeView="changeView"/>
+    <home v-if="currentView === 'home'" v-on:changeView="changeView"/>
     <customFooter/>
   </div>
 </template>
@@ -17,6 +17,14 @@ export default {
     navbar: Navbar,
     home: Home,
     customFooter: Footer
+  },
+  data: () => ({
+    currentView: "home"
+  }),
+  methods: {
+    changeView: function(value) {
+      this.currentView = value;
+    }
   }
 };
 </script>
