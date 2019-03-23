@@ -13,11 +13,12 @@
       </v-container>
     </section>
     <section>
-      <v-container>
-        <v-carousel height="700">
-          <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
-        </v-carousel>
-      </v-container>
+      <!-- <v-container> -->
+      <!-- <v-carousel height="53rem"> -->
+      <v-carousel height="700">
+        <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
+      </v-carousel>
+      <!-- </v-container> -->
     </section>
     <section>
       <v-container>
