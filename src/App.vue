@@ -4,6 +4,7 @@
     <home v-if="currentView === 'home'" v-on:changeView="changeView"/>
     <about v-if="currentView === 'about'" v-on:changeView="changeView"/>
     <download v-if="currentView === 'download'" v-on:changeView="changeView"/>
+    <security v-if="currentView === 'security'" v-on:changeView="changeView"/>
     <customFooter/>
   </div>
 </template>
@@ -13,6 +14,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Download from "./components/Download";
+import Security from "./components/Security";
 import Footer from "./components/Footer";
 
 export default {
@@ -22,6 +24,7 @@ export default {
     home: Home,
     about: About,
     download: Download,
+    security: Security,
     customFooter: Footer
   },
   data: () => ({
