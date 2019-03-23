@@ -79,7 +79,4 @@ export default {
 </script>
 
 <style>
-.text-muted {
-  color: #6c757d;
-}
 </style>

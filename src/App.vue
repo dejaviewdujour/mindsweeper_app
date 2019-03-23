@@ -56,4 +56,8 @@ export default {
   width: 95%;
   margin: auto;
 }
+
+.text-muted {
+  color: #6c757d;
+}
 </style>
