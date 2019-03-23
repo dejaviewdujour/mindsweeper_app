@@ -50,7 +50,13 @@
               </div>
             </v-card-text>
 
-            <v-img v-if="item.img" :src="item.img" max-height="25rem" contain></v-img>
+            <v-layout>
+              <v-flex md3></v-flex>
+              <v-flex md6>
+                <v-img v-if="item.img" :src="item.img" max-height="25rem" contain></v-img>
+              </v-flex>
+              <v-flex md3></v-flex>
+            </v-layout>
           </v-card>
         </v-card-text>
       </v-card>
