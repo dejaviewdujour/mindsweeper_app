@@ -74,7 +74,8 @@
 <script>
 export default {
   data: () => ({
-    gradient: "to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)",
+    //gradient: "to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)",
+    gradient: "to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)",
     team: {
       carlos: {
         name: "Carlos Castro",
@@ -92,7 +93,7 @@ export default {
       },
       ian: {
         name: "Ian McClerin",
-        img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
+        img: require("@/assets/team/ian.jpg"),
         socials: [
           { name: "github", link: "https://github.com/dejaviewdujour" },
           {
@@ -119,7 +120,7 @@ export default {
       },
       yuma: {
         name: "Yuma Sumi",
-        img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
+        img: require("@/assets/team/yuma.jpg"),
         socials: [
           { name: "github", link: "https://github.com/y-yeah" },
           {
