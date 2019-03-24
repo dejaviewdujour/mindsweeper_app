@@ -10,9 +10,10 @@
     "heroku-postbuild": "yarn build"
   },
   "dependencies": {
+    "aws-sdk": "^2.427.0",
+    "express": "^4.16.3",
     "vue": "^2.6.6",
-    "vuetify": "^1.5.1",
-    "express": "^4.16.3"
+    "vuetify": "^1.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
