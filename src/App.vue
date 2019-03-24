@@ -6,6 +6,7 @@
     <download v-if="currentView === 'download'" v-on:changeView="changeView"/>
     <security v-if="currentView === 'security'" v-on:changeView="changeView"/>
     <howDidThisHappened v-if="currentView === 'how'" v-on:changeView="changeView"/>
+    <whatAreThisFiles v-if="currentView === 'info'" v-on:changeView="changeView"/>
     <customFooter/>
   </div>
 </template>
@@ -17,6 +18,7 @@ import About from "./components/About";
 import Download from "./components/Download";
 import Security from "./components/Security";
 import HowDidThisHappened from "./components/HowDidThisHappened";
+import WhatAreThisFiles from "./components/WhatArethisFiles";
 import Footer from "./components/Footer";
 
 export default {
@@ -28,6 +30,7 @@ export default {
     download: Download,
     security: Security,
     howDidThisHappened: HowDidThisHappened,
+    whatAreThisFiles: WhatAreThisFiles,
     customFooter: Footer
   },
   data: () => ({
