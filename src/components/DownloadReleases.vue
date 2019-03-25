@@ -40,25 +40,17 @@
             </v-card-title>
             <v-card-actions>
               <v-layout row>
-                <v-flex sm6>
-                  <v-btn
-                    round
-                    flat
-                    outline
-                    block
-                    color="indigo"
-                    @click="requestLink(item)"
-                  >Request Link</v-btn>
-                </v-flex>
-                <v-flex sm6 v-if="item.url">
-                  <v-btn round flat outline block color="indigo" :href="item.url">Download</v-btn>
-                </v-flex>
+                <v-flex sm3></v-flex>
                 <v-flex sm6 v-if="item.isLoading">
                   <div class="half-circle-spinner" style="margin: auto">
                     <div class="circle circle-1"></div>
                     <div class="circle circle-2"></div>
                   </div>
                 </v-flex>
+                <v-flex sm6 v-else>
+                  <v-btn round flat outline block color="indigo" @click="requestLink(item)">Download</v-btn>
+                </v-flex>
+                <v-flex sm3></v-flex>
               </v-layout>
             </v-card-actions>
           </v-card>
@@ -82,32 +74,7 @@ export default {
       "Linux (experimental)",
       "Android VR (only for Daydream ready devices)"
     ],
-    releases: [
-      //   {
-      //     Key: "StandaloneLinux64.zip",
-      //     LastModified: "2019-03-24T15:04:33.000Z",
-      //     ETag: '"730811aa2419582818146a4b5fce364f-5"',
-      //     Size: 22786066,
-      //     StorageClass: "STANDARD",
-      //     isLoading: false
-      //   },
-      //   {
-      //     Key: "StandaloneOSX.zip",
-      //     LastModified: "2019-03-24T15:04:28.000Z",
-      //     ETag: '"a33e48c9b75894b3fcbef76f8b1dd4d3-5"',
-      //     Size: 24082815,
-      //     StorageClass: "STANDARD",
-      //     isLoading: false
-      //   },
-      //   {
-      //     Key: "StandaloneWindows64.zip",
-      //     LastModified: "2019-03-24T15:03:44.000Z",
-      //     ETag: '"2f9936d88f7e8d7dc2022066fba520f9-6"',
-      //     Size: 28105304,
-      //     StorageClass: "STANDARD",
-      //     isLoading: false
-      //   }
-    ]
+    releases: []
   }),
   mounted() {
     this.listObjects();
@@ -138,7 +105,7 @@ export default {
           "Content-Type": "application/json"
         }
       });
-      item.url = data.url;
+      window.location = data.url;
       item.isLoading = false;
     }
   }
