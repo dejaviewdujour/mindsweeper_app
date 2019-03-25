@@ -50,7 +50,13 @@
             </v-flex>
             <v-flex md4>
               <v-card-actions>
-                <v-btn flat outline round color="indigo">Download</v-btn>
+                <v-btn
+                  flat
+                  outline
+                  round
+                  color="indigo"
+                  @click="$emit('changeView', 'downloadReleases')"
+                >Download</v-btn>
               </v-card-actions>
             </v-flex>
           </v-layout>
