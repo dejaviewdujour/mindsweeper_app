@@ -51,7 +51,7 @@
                   >Request Link</v-btn>
                 </v-flex>
                 <v-flex sm6 v-if="item.url">
-                  <v-btn round flat outline block color="indigo">Download</v-btn>
+                  <v-btn round flat outline block color="indigo" :href="item.url">Download</v-btn>
                 </v-flex>
                 <v-flex sm6 v-if="item.isLoading">
                   <div class="half-circle-spinner" style="margin: auto">
@@ -122,18 +122,23 @@ export default {
           "Content-Type": "application/json"
         }
       });
-      console.log("====>", data);
       this.releases = data.releases.map(element => {
         element.isLoading = false;
         return element;
       });
       this.isLoading = false;
     },
-    requestLink: function(item) {
+    requestLink: async function(item) {
       console.log("this is the requested key", item);
-      //this.isLoading = true;
       item.isLoading = true;
-      item.url = "";
+      const { data } = await axios({
+        method: "get",
+        url: `/api/releases/${item.Key}`,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      item.url = data.url;
       item.isLoading = false;
     }
   }
