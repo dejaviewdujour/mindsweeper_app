@@ -17,7 +17,7 @@ const config = () => {
 
 function listAllObjects(s3) {
   const listObjects = new Promise(resolve => {
-    s3.listObjects((error, data) => {
+    s3.listObjectsV2((error, data) => {
       if (error) {
         console.error("error: ", error);
         return;
