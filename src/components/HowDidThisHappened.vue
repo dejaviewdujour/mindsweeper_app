@@ -14,7 +14,7 @@
         <v-card-title>
           <h3
             class="font-italic text-muted"
-          >The following is an excerpt from an article describing how you can improve your Facebook security</h3>
+          >The following is an excerpt from an article describing why this is happening</h3>
         </v-card-title>
         <v-card-actions>
           <v-btn
