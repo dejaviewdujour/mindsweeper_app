@@ -32,7 +32,7 @@
             <h3 class="display-1">Download</h3>
           </v-card-title>
           <v-layout>
-            <v-fllex md8>
+            <v-flex md8>
               <v-card-text>
                 <p
                   class="subheading"
@@ -47,7 +47,7 @@
                   style="text-align: justify"
                 >3. If using Windows, right click on it and select “Extract All” , and then follow the instructions.</p>
               </v-card-text>
-            </v-fllex>
+            </v-flex>
             <v-flex md4>
               <v-card-actions>
                 <v-btn flat outline round color="indigo">Download</v-btn>
@@ -91,7 +91,7 @@
                 <h3 class="display-1">Download your Facebook data</h3>
               </v-card-title>
               <v-divider class="divider"/>
-              <v-container>
+              <!-- <v-container>
                 <v-list>
                   <v-list-tile>
                     <v-list-tile-content>
@@ -99,7 +99,7 @@
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
-              </v-container>
+              </v-container>-->
               <v-card-actions class="justify-center">
                 <v-btn
                   flat
@@ -126,11 +126,25 @@
                 >Here are some resources explaining what's going on:</div>
               </v-card-text>
               <v-card-actions class="justify-center">
-                <v-btn flat outline block color="indigo" round>What are these files?</v-btn>
+                <v-btn
+                  flat
+                  outline
+                  block
+                  color="indigo"
+                  round
+                  @click="$emit('changeView', 'info')"
+                >What are these files?</v-btn>
               </v-card-actions>
 
               <v-card-actions class="justify-center">
-                <v-btn flat outline block color="indigo" round>How did this happen?</v-btn>
+                <v-btn
+                  flat
+                  outline
+                  block
+                  color="indigo"
+                  round
+                  @click="$emit('changeView', 'how')"
+                >How did this happen?</v-btn>
               </v-card-actions>
 
               <v-card-actions class="justify-center">
