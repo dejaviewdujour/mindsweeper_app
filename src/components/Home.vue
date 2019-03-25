@@ -214,7 +214,7 @@ export default {
 
 <style>
 .transparent {
-  background-color: white !important;
+  /* background-color: white !important; */
   opacity: 1;
   border-color: transparent !important;
 }
