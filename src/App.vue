@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <v-app
+    style="background: #3A1C71; background:linear-gradient(to top, #1A237E, #0D47A1, #336699);"
+  >
     <navbar v-on:changeView="changeView"/>
     <home v-if="currentView === 'home'" v-on:changeView="changeView"/>
     <about v-if="currentView === 'about'" v-on:changeView="changeView"/>
@@ -8,6 +11,7 @@
     <howDidThisHappened v-if="currentView === 'how'" v-on:changeView="changeView"/>
     <whatAreThisFiles v-if="currentView === 'info'" v-on:changeView="changeView"/>
     <customFooter/>
+     </v-app>
   </div>
 </template>
 

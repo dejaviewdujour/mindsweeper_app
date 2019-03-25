@@ -2,11 +2,11 @@
   <div>
     <section>
       <v-container>
-        <v-card flat>
+        <v-card flat class="transparent">
           <v-img :src="images.background"/>
           <v-card-title primary-title class="justify-center">
             <div>
-              <h4 class="headline m-auto">Do you know what facebook has on you?</h4>
+              <h4 class="headline m-auto">Do you know what Facebook has on you?</h4>
             </div>
           </v-card-title>
         </v-card>
@@ -52,18 +52,11 @@
           <v-flex xs12 sm6>
             <v-card color="blue lighten-5">
               <v-card-title primary-title>
-                <h3 class="display-1">How to download your Facebook data</h3>
+                <h3 class="display-1">Download your Facebook data</h3>
               </v-card-title>
               <v-divider class="divider"/>
-              <v-card-text>
-                <div class="subheading" style="text-align: justify">You will need:</div>
-              </v-card-text>
               <v-container>
-                <v-list>
-                  <v-list-tile avatar v-for="(item, index) in text.fbData" :key="index">
-                    <v-list-tile-avatar>
-                      <v-icon>arrow_right</v-icon>
-                    </v-list-tile-avatar>
+               
 
                     <v-list-tile-content>
                       <v-list-tile-title>{{item}}</v-list-tile-title>
@@ -79,7 +72,7 @@
                   round
                   class="mb-2"
                   @click="$emit('changeView', 'download')"
-                >Open this link in a new tab and follow the instructions</v-btn>
+                >Learn How</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -127,15 +120,14 @@
 <script>
 export default {
   data: () => ({
-    images: { background: require("@/assets/textlogo.png") },
+    images: { background: require("@/assets/textlogowhite.png") },
     text: {
       start:
         "Before we can use the app, you will need to personally download your Facebook data. This can only be done by you. The files you will download contain valuable information (including some you might not expect). To secure your privacy, please take the following instructions:",
       listStart: [
         "Use a trusted network such as your secured home network. Consider the risk of using a public WiFi network.",
         "Make sure to use a virus/malware free laptop. Run a virus scan and clean before you use this app."
-      ],
-      fbData: ["Your Facebook account", "Desktop PC or laptop"]
+      ]
     },
     items: [
       {
@@ -163,6 +155,11 @@ export default {
 
 
 <style>
+.transparent {
+   background-color: white!important;
+   opacity: 1;
+   border-color: transparent!important;
+ }
 .overlay {
   background: rgba(0, 0, 0, 0.4);
 }

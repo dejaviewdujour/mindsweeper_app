@@ -2,7 +2,7 @@
   <nav>
     <v-toolbar app color="#336699" dark>
       <!--336699  light-blue darken-3-->
-      <v-toolbar-side-icon style="background-color: #ffffff">
+      <v-toolbar-side-icon>
         <v-img :src="images.icon"/>
       </v-toolbar-side-icon>
       <v-toolbar-title class="headline text-uppercase">
@@ -25,7 +25,7 @@
 <script>
 export default {
   data: () => ({
-    images: { icon: require("@/assets/logo_notext.png") }
+    images: { icon: require("@/assets/mindsweeper_logo_notext.png") }
   })
 };
 </script>
