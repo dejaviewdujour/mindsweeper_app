@@ -2,7 +2,7 @@
   <div>
     <section>
       <v-container>
-        <v-card flat>
+        <v-card flat class="transparent">
           <v-img :src="images.background"/>
           <v-card-title primary-title class="justify-center">
             <div>
@@ -120,7 +120,7 @@
 <script>
 export default {
   data: () => ({
-    images: { background: require("@/assets/textlogo.png") },
+    images: { background: require("@/assets/textlogowhite.png") },
     text: {
       start:
         "Before we can use the app, you will need to personally download your Facebook data. This can only be done by you. The files you will download contain valuable information (including some you might not expect). To secure your privacy, please take the following instructions:",
@@ -155,6 +155,11 @@ export default {
 
 
 <style>
+.transparent {
+   background-color: white!important;
+   opacity: 1;
+   border-color: transparent!important;
+ }
 .overlay {
   background: rgba(0, 0, 0, 0.4);
 }
