@@ -74,7 +74,7 @@ import axios from "axios";
 
 export default {
   data: () => ({
-    isLoading: false,
+    isLoading: true,
     background: require("@/assets/backgrounds/download.jpg"),
     supported: [
       "Mac OS",
@@ -83,35 +83,35 @@ export default {
       "Android VR (only for Daydream ready devices)"
     ],
     releases: [
-      {
-        Key: "StandaloneLinux64.zip",
-        LastModified: "2019-03-24T15:04:33.000Z",
-        ETag: '"730811aa2419582818146a4b5fce364f-5"',
-        Size: 22786066,
-        StorageClass: "STANDARD",
-        isLoading: false
-      },
-      {
-        Key: "StandaloneOSX.zip",
-        LastModified: "2019-03-24T15:04:28.000Z",
-        ETag: '"a33e48c9b75894b3fcbef76f8b1dd4d3-5"',
-        Size: 24082815,
-        StorageClass: "STANDARD",
-        isLoading: false
-      },
-      {
-        Key: "StandaloneWindows64.zip",
-        LastModified: "2019-03-24T15:03:44.000Z",
-        ETag: '"2f9936d88f7e8d7dc2022066fba520f9-6"',
-        Size: 28105304,
-        StorageClass: "STANDARD",
-        isLoading: false
-      }
+      //   {
+      //     Key: "StandaloneLinux64.zip",
+      //     LastModified: "2019-03-24T15:04:33.000Z",
+      //     ETag: '"730811aa2419582818146a4b5fce364f-5"',
+      //     Size: 22786066,
+      //     StorageClass: "STANDARD",
+      //     isLoading: false
+      //   },
+      //   {
+      //     Key: "StandaloneOSX.zip",
+      //     LastModified: "2019-03-24T15:04:28.000Z",
+      //     ETag: '"a33e48c9b75894b3fcbef76f8b1dd4d3-5"',
+      //     Size: 24082815,
+      //     StorageClass: "STANDARD",
+      //     isLoading: false
+      //   },
+      //   {
+      //     Key: "StandaloneWindows64.zip",
+      //     LastModified: "2019-03-24T15:03:44.000Z",
+      //     ETag: '"2f9936d88f7e8d7dc2022066fba520f9-6"',
+      //     Size: 28105304,
+      //     StorageClass: "STANDARD",
+      //     isLoading: false
+      //   }
     ]
   }),
   mounted() {
-    //this.listObjects();
-    console.log(this.releases);
+    this.listObjects();
+    //console.log(this.releases);
   },
   methods: {
     listObjects: async function() {
@@ -123,12 +123,18 @@ export default {
         }
       });
       console.log("====>", data);
+      this.releases = data.releases.map(element => {
+        element.isLoading = false;
+        return element;
+      });
       this.isLoading = false;
     },
     requestLink: function(item) {
       console.log("this is the requested key", item);
       //this.isLoading = true;
       item.isLoading = true;
+      item.url = "";
+      item.isLoading = false;
     }
   }
 };
