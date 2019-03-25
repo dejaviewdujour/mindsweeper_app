@@ -1,11 +1,51 @@
 const AWS = require("aws-sdk");
-AWS.config.update({
-  accessKeyId: process.env.ACCESS_KEY_ID,
-  secretAccessKey: process.env.SECRET_ACCESS_KEY
-});
+const config = () => {
+  AWS.config.update({
+    region: process.env.REGION,
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY
+  });
 
-let s3 = new AWS.S3({
-  region: process.env.REGION
-});
+  const params = {
+    Bucket: process.env.BUCKET
+  };
+  const s3 = new AWS.S3({
+    params
+  });
+  return s3;
+};
 
-module.exports = { s3 };
+function listAllObjects(s3) {
+  const listObjects = new Promise(resolve => {
+    s3.listObjects((error, data) => {
+      if (error) {
+        console.error("error: ", error);
+        return;
+      }
+
+      resolve(data.Contents);
+    });
+  });
+
+  return listObjects;
+}
+//StandaloneOSX.zip
+function getReleaseURL(s3, key) {
+  const getURL = new Promise(resolve => {
+    s3.getSignedUrl(
+      "getObject",
+      {
+        Key: key,
+        Expires: 60 * 5
+      },
+      function(err, url) {
+        console.log("this is the url", url);
+        resolve(url);
+      }
+    );
+  });
+
+  return getURL;
+}
+
+module.exports = { config, listAllObjects, getReleaseURL };
