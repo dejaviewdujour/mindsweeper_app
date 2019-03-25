@@ -1,10 +1,10 @@
 <template>
   <div>
-    <v-jumbotron :gradient="gradient" dark :src="background">
+    <v-jumbotron :gradient="gradient" :src="background">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
-            <h3 class="display-3">How can I improve my Facebook security?</h3>
+            <h3 class="display-3">How Did This Happened?</h3>
           </v-flex>
         </v-layout>
       </v-container>

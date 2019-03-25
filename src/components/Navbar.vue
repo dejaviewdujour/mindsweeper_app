@@ -12,10 +12,10 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat @click="$emit('changeView', 'home')">Home</v-btn>
-        <v-btn flat @click="$emit('changeView', 'about')">About</v-btn>
+        <v-btn flat @click="$emit('changeView', 'about')">About Us</v-btn>
         <v-btn flat @click="$emit('changeView', 'download')">Download</v-btn>
-        <v-btn flat @click="$emit('changeView', 'security')">Security</v-btn>
-        <v-btn flat @click="$emit('changeView', 'how')">How</v-btn>
+        <v-btn flat @click="$emit('changeView', 'security')">Improve Your Security</v-btn>
+        <v-btn flat @click="$emit('changeView', 'how')">How Did This Happened?</v-btn>
         <v-btn flat @click="$emit('changeView', 'info')">Info</v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -25,7 +25,7 @@
 <script>
 export default {
   data: () => ({
-    images: { icon: require("@/assets/mindsweeper_logo_notext.png") }
+    images: { icon: require("@/assets/logo_notext.png") }
   })
 };
 </script>
