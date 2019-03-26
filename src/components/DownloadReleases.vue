@@ -30,8 +30,8 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <div class="half-circle-spinner spinner" v-if="isLoading">
-          <div class="circle circle-1"></div>
-          <div class="circle circle-2"></div>
+          <div class="circle circle-1-white"></div>
+          <div class="circle circle-2-white"></div>
         </div>
         <v-flex sm6 v-for="(item, index) in releases" :key="index" v-else>
           <v-card>
@@ -78,7 +78,6 @@ export default {
   }),
   mounted() {
     this.listObjects();
-    //console.log(this.releases);
   },
   methods: {
     listObjects: async function() {
@@ -152,6 +151,16 @@ export default {
 
 .half-circle-spinner .circle.circle-2 {
   border-bottom-color: #336699;
+  animation: half-circle-spinner-animation 1s infinite alternate;
+}
+
+.half-circle-spinner .circle.circle-1-white {
+  border-top-color: #ffffff;
+  animation: half-circle-spinner-animation 1s infinite;
+}
+
+.half-circle-spinner .circle.circle-2-white {
+  border-bottom-color: #ffffff;
   animation: half-circle-spinner-animation 1s infinite alternate;
 }
 
