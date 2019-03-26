@@ -36,7 +36,14 @@
         <v-flex sm6 v-for="(item, index) in releases" :key="index" v-else>
           <v-card>
             <v-card-title>
-              <h2>{{item.Key}}</h2>
+              <v-layout row>
+                <v-flex md8>
+                  <h2>{{item.Key}}</h2>
+                </v-flex>
+                <v-flex md4>
+                  <h2 class="text-right">{{item.Size}}</h2>
+                </v-flex>
+              </v-layout>
             </v-card-title>
             <v-card-actions>
               <v-layout row>
@@ -80,6 +87,16 @@ export default {
     this.listObjects();
   },
   methods: {
+    bytesToSize: function(bytes) {
+      const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+      if (bytes === 0) return "n/a";
+      const i = parseInt(
+        Math.floor(Math.log(Math.abs(bytes)) / Math.log(1024)),
+        10
+      );
+      if (i === 0) return `${bytes} ${sizes[i]})`;
+      return `${(bytes / 1024 ** i).toFixed(1)} ${sizes[i]}`;
+    },
     listObjects: async function() {
       const { data } = await axios({
         method: "get",
@@ -90,12 +107,12 @@ export default {
       });
       this.releases = data.releases.map(element => {
         element.isLoading = false;
+        element.Size = this.bytesToSize(element.Size);
         return element;
       });
       this.isLoading = false;
     },
     requestLink: async function(item) {
-      console.log("this is the requested key", item);
       item.isLoading = true;
       const { data } = await axios({
         method: "get",
@@ -171,5 +188,9 @@ export default {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.text-right {
+  text-align: right;
 }
 </style>
