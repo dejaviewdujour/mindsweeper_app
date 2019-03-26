@@ -6,7 +6,7 @@
           <v-img :src="images.background"/>
           <v-card-title primary-title class="justify-center">
             <div>
-              <h4 class="headline m-auto">Do you know what Facebook has on you?</h4>
+              <h4 class="headline m-auto" style="color: white">Do you know what Facebook has on you?</h4>
             </div>
           </v-card-title>
         </v-card>
@@ -223,5 +223,9 @@ export default {
 }
 .mt-5 {
   padding-top: 15rem;
+}
+
+.text-white {
+  color: white;
 }
 </style>
