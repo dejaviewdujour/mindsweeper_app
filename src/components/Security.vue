@@ -52,6 +52,7 @@
 export default {
   data: () => ({
     background: require("@/assets/backgrounds/security.jpg"),
+    gradient: "to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)",
     article: {
       link:
         "https://www.scentropic.com/blog/2018/sep/facebook-data/facebook-data.shtml?utm_source=Medium&utm_medium=blog&utm_campaign=FBdata",
