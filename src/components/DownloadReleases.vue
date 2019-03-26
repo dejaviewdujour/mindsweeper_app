@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-jumbotron :src="background">
+    <v-jumbotron :gradient="gradient" :src="background">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
