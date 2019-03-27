@@ -89,23 +89,14 @@
       </v-container>
     </section>
     <section>
-      <v-container>
-        <v-layout row>
-          <v-flex xs12 sm6>
+      <v-layout row wrap>
+        <v-flex md6>
+          <v-container>
             <v-card>
               <v-card-title primary-title>
                 <h3 class="display-1">Download your Facebook data</h3>
               </v-card-title>
               <v-divider class="divider"/>
-              <!-- <v-container>
-                <v-list>
-                  <v-list-tile>
-                    <v-list-tile-content>
-                      <v-list-tile-title>{{item}}</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                </v-list>
-              </v-container>-->
               <v-card-actions class="justify-center">
                 <v-btn
                   flat
@@ -117,8 +108,10 @@
                 >Learn How</v-btn>
               </v-card-actions>
             </v-card>
-          </v-flex>
-          <v-flex xs12 sm6>
+          </v-container>
+        </v-flex>
+        <v-flex md6>
+          <v-container>
             <v-card class="ml-2">
               <v-card-title primary-title>
                 <h3 class="display-1">Additional Resources</h3>
@@ -165,9 +158,9 @@
                 >Who created this?</v-btn>
               </v-card-actions>
             </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
+          </v-container>
+        </v-flex>
+      </v-layout>
     </section>
   </div>
 </template>
@@ -232,13 +225,6 @@ export default {
 
 .bg-dark {
   color: #3a1c71;
-  /* background: #336699; */
-  /* background: linear-gradient(to top, #1a237e, #0d47a1, #336699); */
-  /* background: linear-gradient(
-    to top right,
-    rgba(100, 115, 201, 0.33),
-    rgba(25, 32, 72, 0.7)
-  ); */
   background: linear-gradient(to top right, #336699, #0d47a1);
 }
 </style>
