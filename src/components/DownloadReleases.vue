@@ -73,6 +73,7 @@ import axios from "axios";
 
 export default {
   data: () => ({
+    gradient: "to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)",
     isLoading: true,
     background: require("@/assets/backgrounds/download.jpg"),
     supported: [
