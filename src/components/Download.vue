@@ -1,10 +1,6 @@
 <template>
   <div>
-    <v-jumbotron
-      :gradient="gradient"
-      dark
-      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-    >
+    <v-jumbotron :gradient="gradient" dark :src="background">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
@@ -67,6 +63,7 @@
 <script>
 export default {
   data: () => ({
+    background: require("@/assets/backgrounds/key.jpeg"),
     gradient: "to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)",
     steps: [
       { text: `Go to Facebook and sign in.`, img: "" },

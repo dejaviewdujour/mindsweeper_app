@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-jumbotron dark :src="background">
+    <v-jumbotron :gradient="gradient" dark :src="background">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
@@ -40,6 +40,7 @@
 export default {
   data: () => ({
     background: require("@/assets/backgrounds/files.jpg"),
+    gradient: "to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)",
     files: {
       intro:
         "The folders and their contents are complex. Not everyone has the same folders and the information stored is different for users who have a Facebook app stored on an Android phone vs. an iPhone. Here are the folders and what contents are included:",

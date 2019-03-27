@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-jumbotron :gradient="gradient" :src="background">
+    <v-jumbotron :gradient="gradient" dark :src="background">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
@@ -52,6 +52,7 @@
 export default {
   data: () => ({
     background: require("@/assets/backgrounds/surprised.jpg"),
+    gradient: "to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)",
     article: {
       link:
         "https://www.popsci.com/advertisers-targeting-facebook-account-settings",

@@ -1,10 +1,7 @@
 <template>
   <div>
     <v-jumbotron
-      :gradient="gradient"
-      dark
-      src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-    >
+      :gradient="gradient" dark :src="background">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
@@ -74,7 +71,7 @@
 <script>
 export default {
   data: () => ({
-    //gradient: "to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)",
+    background: require("@/assets/backgrounds/mortar.jpg"),
     gradient: "to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)",
     team: {
       carlos: {
