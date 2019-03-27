@@ -19,7 +19,7 @@
     </section>
     <section>
       <v-container>
-        <v-card color="blue lighten-5">
+        <v-card>
           <v-card-text>
             <div class="subheading" style="text-align: justify">{{ text.intro }}</div>
           </v-card-text>
@@ -27,7 +27,7 @@
       </v-container>
 
       <v-container>
-        <v-card color="blue lighten-5">
+        <v-card>
           <v-card-title primary-title>
             <h3 class="display-1">Download</h3>
           </v-card-title>
@@ -64,7 +64,7 @@
       </v-container>
 
       <v-container>
-        <v-card color="blue lighten-5">
+        <v-card>
           <v-card-title primary-title>
             <h3 class="display-1">Before you start</h3>
           </v-card-title>
@@ -92,7 +92,7 @@
       <v-container>
         <v-layout row>
           <v-flex xs12 sm6>
-            <v-card color="blue lighten-5">
+            <v-card>
               <v-card-title primary-title>
                 <h3 class="display-1">Download your Facebook data</h3>
               </v-card-title>
@@ -119,7 +119,7 @@
             </v-card>
           </v-flex>
           <v-flex xs12 sm6>
-            <v-card color="blue lighten-5" class="ml-2">
+            <v-card class="ml-2">
               <v-card-title primary-title>
                 <h3 class="display-1">Additional Resources</h3>
               </v-card-title>
