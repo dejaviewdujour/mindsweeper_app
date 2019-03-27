@@ -1,7 +1,6 @@
 <template>
   <div>
-    <v-jumbotron
-      :gradient="gradient" dark :src="background">
+    <v-jumbotron :gradient="gradient" dark :src="background">
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
@@ -134,7 +133,7 @@ export default {
       github: `<i class="fab fa-github fa-2x"></i>`,
       linkedin: `<i class="fab fa-linkedin fa-2x"></i>`,
       twitter: `<i class="fab fa-twitter fa-2x"></i>`,
-      nonquixote: `<i class="fab fa-vimeo-v fa-2x"></i>`
+      nonquixote: `<i class="fas fa-link fa-2x"></i>`
     }
   })
 };

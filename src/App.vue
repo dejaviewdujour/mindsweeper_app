@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <v-app
-    style="background: #3A1C71; background:linear-gradient(to top, #1A237E, #0D47A1, #336699);"
-  >
-    <navbar v-on:changeView="changeView"/>
-    <home v-if="currentView === 'home'" v-on:changeView="changeView"/>
-    <about v-if="currentView === 'about'" v-on:changeView="changeView"/>
-    <download v-if="currentView === 'download'" v-on:changeView="changeView"/>
-    <downloadReleases v-if="currentView === 'downloadReleases'" v-on:changeView="changeView"/>
-    <security v-if="currentView === 'security'" v-on:changeView="changeView"/>
-    <howDidThisHappened v-if="currentView === 'how'" v-on:changeView="changeView"/>
-    <whatAreThisFiles v-if="currentView === 'info'" v-on:changeView="changeView"/>
-    <customFooter/>
-     </v-app>
+    <v-app>
+      <!-- style="background: #3A1C71; background:linear-gradient(to top, #1A237E, #0D47A1, #336699);" -->
+      <navbar v-on:changeView="changeView"/>
+      <home v-if="currentView === 'home'" v-on:changeView="changeView"/>
+      <about v-if="currentView === 'about'" v-on:changeView="changeView"/>
+      <download v-if="currentView === 'download'" v-on:changeView="changeView"/>
+      <downloadReleases v-if="currentView === 'downloadReleases'" v-on:changeView="changeView"/>
+      <security v-if="currentView === 'security'" v-on:changeView="changeView"/>
+      <howDidThisHappened v-if="currentView === 'how'" v-on:changeView="changeView"/>
+      <whatAreThisFiles v-if="currentView === 'info'" v-on:changeView="changeView"/>
+      <customFooter/>
+    </v-app>
   </div>
 </template>
 
@@ -60,6 +59,7 @@ export default {
   /* text-align: center; */
   color: #2c3e50;
   /* margin-top: 60px; */
+  background-color: #e9ebee;
 }
 
 .divider {

@@ -15,7 +15,9 @@
           <h3>{{files.intro}}</h3>
         </v-card-title>
       </v-card>
-      <v-card v-for="(item, index) in files.folders" :key="index">
+    </v-container>
+    <v-container v-for="(item, index) in files.folders" :key="index">
+      <v-card>
         <v-card-title>
           <h2>{{item.name}}</h2>
         </v-card-title>

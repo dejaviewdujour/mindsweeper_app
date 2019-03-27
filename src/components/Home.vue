@@ -1,12 +1,12 @@
 <template>
   <div>
-    <section>
+    <section class="bg-dark">
       <v-container>
         <v-card flat class="transparent">
           <v-img :src="images.background"/>
           <v-card-title primary-title class="justify-center">
             <div>
-              <h4 class="headline m-auto" style="color: white">Do you know what Facebook has on you?</h4>
+              <h4 class="headline m-auto text-white">Do you know what Facebook has on you?</h4>
             </div>
           </v-card-title>
         </v-card>
@@ -19,7 +19,7 @@
     </section>
     <section>
       <v-container>
-        <v-card color="blue lighten-5">
+        <v-card>
           <v-card-text>
             <div class="subheading" style="text-align: justify">{{ text.intro }}</div>
           </v-card-text>
@@ -27,7 +27,7 @@
       </v-container>
 
       <v-container>
-        <v-card color="blue lighten-5">
+        <v-card>
           <v-card-title primary-title>
             <h3 class="display-1">Download</h3>
           </v-card-title>
@@ -64,7 +64,7 @@
       </v-container>
 
       <v-container>
-        <v-card color="blue lighten-5">
+        <v-card>
           <v-card-title primary-title>
             <h3 class="display-1">Before you start</h3>
           </v-card-title>
@@ -92,7 +92,7 @@
       <v-container>
         <v-layout row>
           <v-flex xs12 sm6>
-            <v-card color="blue lighten-5">
+            <v-card>
               <v-card-title primary-title>
                 <h3 class="display-1">Download your Facebook data</h3>
               </v-card-title>
@@ -119,7 +119,7 @@
             </v-card>
           </v-flex>
           <v-flex xs12 sm6>
-            <v-card color="blue lighten-5" class="ml-2">
+            <v-card class="ml-2">
               <v-card-title primary-title>
                 <h3 class="display-1">Additional Resources</h3>
               </v-card-title>
@@ -176,6 +176,7 @@
 <script>
 export default {
   data: () => ({
+    gradient: "to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)",
     images: { background: require("@/assets/textlogowhite.png") },
     text: {
       intro:
@@ -227,5 +228,17 @@ export default {
 
 .text-white {
   color: white;
+}
+
+.bg-dark {
+  color: #3a1c71;
+  /* background: #336699; */
+  /* background: linear-gradient(to top, #1a237e, #0d47a1, #336699); */
+  /* background: linear-gradient(
+    to top right,
+    rgba(100, 115, 201, 0.33),
+    rgba(25, 32, 72, 0.7)
+  ); */
+  background: linear-gradient(to top right, #336699, #0d47a1);
 }
 </style>
