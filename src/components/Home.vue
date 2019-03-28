@@ -162,9 +162,6 @@ export default {
       },
       {
         src: require("@/assets/carousel/05.jpg")
-      },
-      {
-        src: require("@/assets/carousel/06.jpg")
       }
     ]
   })
