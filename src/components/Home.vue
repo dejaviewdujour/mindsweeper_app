@@ -89,9 +89,10 @@
       </v-container>
     </section>
     <v-container>
-      <v-layout row>
-        <v-flex xs12>
-          <v-card>
+      <v-layout row wrap>
+        <v-flex md1/>
+        <v-flex md4>
+          <v-card class="mb-4">
             <v-card-title primary-title>
               <h3 class="display-1">Download your Facebook data</h3>
             </v-card-title>
@@ -108,12 +109,40 @@
             </v-card-actions>
           </v-card>
         </v-flex>
-        <v-flex xs12>
+        <v-flex md1/>
+        <v-flex md5>
           <v-card>
             <v-card-title primary-title>
-              <h3 class="display-1">Download your Facebook data</h3>
+              <h3 class="display-1">Additional Resources</h3>
             </v-card-title>
             <v-divider class="divider"/>
+
+            <v-card-text>
+              <div
+                class="subheading"
+                style="text-align: justify"
+              >Here are some resources explaining what's going on:</div>
+            </v-card-text>
+            <v-card-actions class="justify-center">
+              <v-btn
+                flat
+                outline
+                color="indigo"
+                round
+                @click="$emit('changeView', 'info')"
+              >What are these files?</v-btn>
+            </v-card-actions>
+
+            <v-card-actions class="justify-center">
+              <v-btn
+                flat
+                outline
+                color="indigo"
+                round
+                @click="$emit('changeView', 'how')"
+              >How did this happen?</v-btn>
+            </v-card-actions>
+
             <v-card-actions class="justify-center">
               <v-btn
                 flat
@@ -121,8 +150,8 @@
                 color="indigo"
                 round
                 class="mb-2"
-                @click="$emit('changeView', 'download')"
-              >Learn How</v-btn>
+                @click="$emit('changeView', 'about')"
+              >Who created this?</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
