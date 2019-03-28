@@ -110,11 +110,14 @@ export default {
       },
       {
         text: `Now that you have a new folder named “facebook-<YOUR_USERNAME>”. Remember the pathway to this file, you will need it when using Mindsweeper.`,
+        sublist: [
+          `If using Daydream Solo Headset, upload to a microSD card and rename folder "facebook-data."`
+        ],
         img: ""
       },
       {
         text: `Congratulations! You have a very valuable file so keep it safe!`,
-        img: ""
+        img: "",
       }
     ]
   })
