@@ -14,12 +14,6 @@
           :key="index"
           @click="$emit('changeView', item.view)"
         >{{item.title}}</v-btn>
-        <!-- <v-btn flat @click="$emit('changeView', 'download')">Get Your Data</v-btn>
-        <v-btn flat @click="$emit('changeView', 'downloadReleases')">Download The App</v-btn>
-        <v-btn flat @click="$emit('changeView', 'info')">What Are These Files?</v-btn>
-        <v-btn flat @click="$emit('changeView', 'security')">Improve Your Security</v-btn>
-        <v-btn flat @click="$emit('changeView', 'how')">Resources</v-btn>
-        <v-btn flat @click="$emit('changeView', 'about')">About Us</v-btn>-->
       </v-toolbar-items>
       <v-menu class="hidden-md-and-up">
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
