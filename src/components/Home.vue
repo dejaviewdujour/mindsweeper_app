@@ -21,6 +21,13 @@
       <v-container>
         <v-card>
           <v-card-text>
+            <div class="subheading" style="text-align: justify">{{ text.description }}</div>
+          </v-card-text>
+        </v-card>
+      </v-container>
+      <v-container>
+        <v-card>
+          <v-card-text>
             <div class="subheading" style="text-align: justify">{{ text.intro }}</div>
           </v-card-text>
         </v-card>
@@ -167,6 +174,8 @@ export default {
     gradient: "to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)",
     images: { background: require("@/assets/textlogowhite.png") },
     text: {
+      description:
+        "Mindsweeper is an app that helps you visualise your personal Facebook data in VR. It aims to raise awareness of the data Facebook shares with third parties about you.",
       intro:
         "Online security and privacy has never been more important. Facebook gathers a lot of personal data that advertisers can have access to. Mindsweeper helps you visualize your complex Facebook data in 3D and educates you on how this has happened and what you can do about it. Note that this application cannot store your information and is safe to use as long as you are safe with your data.",
       start:
