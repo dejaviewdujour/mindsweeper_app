@@ -19,13 +19,11 @@
 ## Introduction
 
 [![Build Status](https://travis-ci.org/mortar-pestle/mindsweeper.svg?branch=master)](https://travis-ci.org/mortar-pestle/ego-trip)
-[![Dependencies](https://img.shields.io/librariesio/github/mortar-pestle/ego-trip.svg)]()
-[![Size](https://img.shields.io/github/repo-size/mortar-pestle/mindsweeper.svg)]()
-[![Issue Tracking](https://img.shields.io/github/issues/mortar-pestle/mindsweeper.svg)]()
-[![Issue Tracking](https://img.shields.io/github/issues-pr-raw/mortar-pestle/mindsweeper.svg)]()
-[![Social](https://img.shields.io/github/forks/mortar-pestle/mindsweeper.svg?label=Fork)]()
-[![Version](https://img.shields.io/github/release/mortar-pestle/mindsweeper.svg)]()
-[![Activity](https://img.shields.io/github/last-commit/mortar-pestle/mindsweeper.svg)]()
+[![Size](https://img.shields.io/github/repo-size/mortar-pestle/mindsweeper_app.svg)]()
+[![Issue Tracking](https://img.shields.io/github/issues/mortar-pestle/mindsweeper_app.svg)]()
+[![Issue Tracking](https://img.shields.io/github/issues-pr-raw/mortar-pestle/mindsweeper_app.svg)]()
+[![Social](https://img.shields.io/github/forks/mortar-pestle/mindsweeper_app.svg?label=Fork)]()
+[![Activity](https://img.shields.io/github/last-commit/mortar-pestle/mindsweeper_app.svg)]()
 
 Online security and privacy has never been more important. Facebook gathers a lot of personal data that advertisers can have access to. Mindsweeper helps you visualize your complex Facebook data in 3D and educates you on how this has happened and what you can do about it. <i>Note that this application cannot store your information and is safe to use as long as you are safe with your data.</i>
 
