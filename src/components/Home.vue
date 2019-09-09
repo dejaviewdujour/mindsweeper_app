@@ -21,6 +21,13 @@
       <v-container>
         <v-card>
           <v-card-text>
+            <div class="subheading" style="text-align: justify">{{ text.description }}</div>
+          </v-card-text>
+        </v-card>
+      </v-container>
+      <v-container>
+        <v-card>
+          <v-card-text>
             <div class="subheading" style="text-align: justify">{{ text.intro }}</div>
           </v-card-text>
         </v-card>
@@ -88,87 +95,75 @@
         </v-card>
       </v-container>
     </section>
-    <section>
-      <v-container>
-        <v-layout row>
-          <v-flex xs12 sm6>
-            <v-card>
-              <v-card-title primary-title>
-                <h3 class="display-1">Download your Facebook data</h3>
-              </v-card-title>
-              <v-divider class="divider"/>
-              <!-- <v-container>
-                <v-list>
-                  <v-list-tile>
-                    <v-list-tile-content>
-                      <v-list-tile-title>{{item}}</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                </v-list>
-              </v-container>-->
-              <v-card-actions class="justify-center">
-                <v-btn
-                  flat
-                  outline
-                  color="indigo"
-                  round
-                  class="mb-2"
-                  @click="$emit('changeView', 'download')"
-                >Learn How</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-card class="ml-2">
-              <v-card-title primary-title>
-                <h3 class="display-1">Additional Resources</h3>
-              </v-card-title>
-              <v-divider class="divider"/>
+    <v-container>
+      <v-layout row wrap>
+        <v-flex md1/>
+        <v-flex md4>
+          <v-card class="mb-4">
+            <v-card-title primary-title>
+              <h3 class="display-1">Download your Facebook data</h3>
+            </v-card-title>
+            <v-divider class="divider"/>
+            <v-card-actions class="justify-center">
+              <v-btn
+                flat
+                outline
+                color="indigo"
+                round
+                class="mb-2"
+                @click="$emit('changeView', 'download')"
+              >Learn How</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+        <v-flex md1/>
+        <v-flex md5>
+          <v-card>
+            <v-card-title primary-title>
+              <h3 class="display-1">Additional Resources</h3>
+            </v-card-title>
+            <v-divider class="divider"/>
 
-              <v-card-text>
-                <div
-                  class="subheading"
-                  style="text-align: justify"
-                >Here are some resources explaining what's going on:</div>
-              </v-card-text>
-              <v-card-actions class="justify-center">
-                <v-btn
-                  flat
-                  outline
-                  block
-                  color="indigo"
-                  round
-                  @click="$emit('changeView', 'info')"
-                >What are these files?</v-btn>
-              </v-card-actions>
+            <v-card-text>
+              <div
+                class="subheading"
+                style="text-align: justify"
+              >Here are some resources explaining what's going on:</div>
+            </v-card-text>
+            <v-card-actions class="justify-center">
+              <v-btn
+                flat
+                outline
+                color="indigo"
+                round
+                @click="$emit('changeView', 'info')"
+              >What are these files?</v-btn>
+            </v-card-actions>
 
-              <v-card-actions class="justify-center">
-                <v-btn
-                  flat
-                  outline
-                  block
-                  color="indigo"
-                  round
-                  @click="$emit('changeView', 'how')"
-                >How did this happen?</v-btn>
-              </v-card-actions>
+            <v-card-actions class="justify-center">
+              <v-btn
+                flat
+                outline
+                color="indigo"
+                round
+                @click="$emit('changeView', 'how')"
+              >How did this happen?</v-btn>
+            </v-card-actions>
 
-              <v-card-actions class="justify-center">
-                <v-btn
-                  flat
-                  outline
-                  block
-                  color="indigo"
-                  round
-                  class="mb-2"
-                  @click="$emit('changeView', 'about')"
-                >Who created this?</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </section>
+            <v-card-actions class="justify-center">
+              <v-btn
+                flat
+                outline
+                color="indigo"
+                round
+                class="mb-2"
+                @click="$emit('changeView', 'about')"
+              >Who created this?</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
@@ -179,6 +174,8 @@ export default {
     gradient: "to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)",
     images: { background: require("@/assets/textlogowhite.png") },
     text: {
+      description:
+        "Mindsweeper is an app that helps you visualise your personal Facebook data in VR. It aims to raise awareness of the data Facebook shares with third parties about you.",
       intro:
         "Online security and privacy has never been more important. Facebook gathers a lot of personal data that advertisers can have access to. Mindsweeper helps you visualize your complex Facebook data in 3D and educates you on how this has happened and what you can do about it. Note that this application cannot store your information and is safe to use as long as you are safe with your data.",
       start:
@@ -229,13 +226,6 @@ export default {
 
 .bg-dark {
   color: #3a1c71;
-  /* background: #336699; */
-  /* background: linear-gradient(to top, #1a237e, #0d47a1, #336699); */
-  /* background: linear-gradient(
-    to top right,
-    rgba(100, 115, 201, 0.33),
-    rgba(25, 32, 72, 0.7)
-  ); */
   background: linear-gradient(to top right, #336699, #0d47a1);
 }
 </style>
